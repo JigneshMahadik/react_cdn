@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React CDN</title>
+    
+    <!-- React libraries -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        var h1 = React.createElement("h1",null,"Topics Covered");
+        var p = React.createElement("p",{
+            style :{marginLeft : 20}
+        },"The following is a list of all the topics we cover in the MDN learning area.");
+        
+        var a1 = React.createElement("a",
+        { 
+            href : "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web" , 
+            style :{color:"blue", cursor:"pointer"} 
+        },
+        "Getting started with the web");
+        var p1 = React.createElement("p",{
+            style :{marginLeft : 20}
+        },"Provides a practical introduction to web developemnt for complete beginners.")
+
+        var a2 = React.createElement("a",{
+            href : "https://developer.mozilla.org/en-US/docs/Learn/HTML",
+            style :{color:"blue", cursor:"pointer"}
+        },"HTML-Structuring the web")
+        var p2 = React.createElement("p",{
+            style :{marginLeft : 20}
+        },
+        "HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.")
+
+        var a3 = React.createElement("a",
+        { 
+            href : "https://developer.mozilla.org/en-US/docs/Web/CSS" , 
+            style :{color:"blue", cursor:"pointer"} 
+        },
+        "CSS - Styling the web");
+        var p3 = React.createElement("p",{
+            style :{marginLeft : 20}
+        },
+        "CSS is the language that we use to control our web content's style and layout,  as well as adding behaviour like animation. This topic provides comprehensive coverage of CSS.")
+
+        const elements = [h1,p,a1,p1,a2,p2,a3,p3];
+        ReactDOM.render(elements,document.getElementById("root"));
+    </script>
+</body>
+</html>
